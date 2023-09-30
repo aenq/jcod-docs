@@ -5,3 +5,4 @@
 * [Cara Menggunakan API sebagai Pengiriman Massal](/sidebar/kirimmassal.md)
 * [Cara Register Akun](/sidebar/register.md)
 * [Cara Login Akun](/sidebar/login.md)
+* [Cara Cek Ongkos Kirim](/sidebar/cekongkir.md)
