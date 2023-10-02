@@ -1,4 +1,104 @@
-# Cara cek ongkos kirim di JuraganCOD
+# Fitur Pengguna
+
+Berikut adalah fitur yang dapat digunakan oleh user:
+1. Pengelolaan akun dan profil(User)
+    * <a href="/#/fiturpengguna?id=register">Register</a>
+    * <a href="#/sidebar/login">Login</a>
+    * <a href="#/">Lupa Password</a>
+    * <a href="#/">Edit Profile</a>
+    * <a href="#/">Member</a>
+2. Transaksi(transactions)
+    * <a href="#/">Buat Pengiriman</a>
+    * <a href="#/">Cek Resi</a>
+    * <a href="#/sidebar/cekongkir">Cek Ongkos Kirim</a>
+    * <a href="#/">Membuat Rekap Pembelian</a>
+    * <a href="#/">Tiket dan Claim</a>
+    * <a href="#/">Katalog Produk</a>
+3. Keuangan(finance)
+    * <a href="#/">Pembayaran</a>
+    * <a href="#/">Penarikan Saldo</a>
+    * <a href="#/">Cek Saldo</a>
+
+> ## Pengelolaan Akun dan Profil
+
+### Register
+
+Tahap melakukan registrasi akun:
+1. Mengisi form register
+2. Verifikasi nomor Whatsapp
+3. Verifikasi email
+
+#### Mengisi form register
+![Halaman Register](../images/register.png)
+- Silahkan akses <b>JuraganCOD.com</b>
+- Klik <b>Daftar</b>
+- Isi form pendaftaran <br>
+Contoh data JSON untuk dikirim melalui API <b><i>register-seller</i></b>:
+```
+{
+    "fullname": "M Dhifta",
+    "email": "dhifta48@gmail.com",
+    "password": "123456",
+    "phone_number":"6285791419626",
+    "code_referal": ""
+}
+```
+
+!> Hal yang perlu diperhatikan: <br>
+![Form Register](../images/form-register.png)
+** Semua kolom kecuali `Kode Referral` <b>wajib</b> diisi. <br>
+** `No. Whatsapp` minimal berisi 8 angka. <br>
+** `Kata Sandi` minimal 8 angka dengan gabungan huruf kapital atau kecil, angka, dan simbol.
+
+Setelah form berhasil dikirim dengan kriteria data yang sesuai, maka akan dialihkan ke halaman Verifikasi OTP.
+
+#### Verifikasi nomor Whatsapp
+Tombol <b>Submit</b> pada form registrasi akan mentrigger API <b><i>send-whatsapp-api</i></b> yang mengirimkan OTP ke nomor Whatsapp yang telah anda input. <br>
+![Halaman Verifikasi OTP](../images/OTP.png)
+
+- Cek kode OTP yang dikirim pada nomor Whatsapp anda. <br>
+Apabila belum menerima kode, maka lakukan <b>Kirim ulang kode.</b> <br>
+Apabila kode OTP telah muncul maka masukkan kode tersebut pada kolom yang tersedia. <br>
+
+- Klik tombol <b>lanjutkan</b> yang akan mengirim data atau kode OTP ke API <b><i>verification-otp</i></b> <br>
+Apabila kode yang dikirim salah, API akan merespon ```Upps, your email or number not found.``` maka anda dapat melakukan <b>Kirim ulang kode.</b> <br>
+Apabila kode OTP yang dimasukkan benar, maka nomor Whatsapp anda berhasil terverifikasi.<br>
+<!-- kayaknya responnya masih salah untuk yg kode OTP salah, harusnya Kode OTP Salah bukan email/no hp not found -->
+
+#### Verifikasi email
+Tombol <b>Lanjutkan</b> yang diklik dan berhasil memverifikasi nomor Whatsapp pada tahap sebelumnya, akan memuat halaman Verifikasi Email sekaligus mentrigger API <b><i>verification-email</i></b> yang otomatis mengirimkan email verification ke alamat email anda.
+
+- Cek email anda yang telah dikirim <i>email verification</i>
+- Klik pada tombol atau link yang diarahkan pada email untuk memverifikasi email anda. <br>
+Apabila gagal memverifikasi, anda dapat meminta untuk melakukan <b>Kirim ulang email</b>. <br>
+Apabila email berhasil terverifikasi, maka anda akan langsung diarahkan ke <b>Halaman Dashboard</b>.
+
+### Login
+Pada halaman login, anda hanya perlu melakukan input <b>Email atau No Telfon</b> dan <b>Password</b> yang telah anda buat pada proses Registrasi Akun.<br>
+
+#### Mengisi data login
+![Halaman Login](../images/login.png)
+Contoh data JSON untuk dikirim melalui API <b><i>login</i></b>:
+```
+{
+    "email": "hifisaputra1@gmail.com",
+    "password": "123456"    
+}
+```
+
+Apabila data yang dimasukkan sesuai dengan akun yang ada pada database, maka API <b><i>login</i></b> akan merespon sebagai berikut yang artinya anda berhasil login dan otomatis diarahkan ke <b>Halaman Dashboard</b>:
+```
+```
+Apabila gagal melakukan login, maka API akan merespon sebagai berikut dan anda dapat mengulangi proses login yang sama:
+```
+```
+### Lupa Password
+### Edit Profil
+### Member
+> ## Transaksi
+### Membuat pengiriman
+### Cek Resi
+### Cek Ongkos Kirim
 !> User perlu **login** ke dalam **akun JuraganCOD** terlebih dahulu
 
 Langkah-langkah untuk mengecek ongkos kirim:
@@ -226,3 +326,11 @@ Jika sukses, maka anda akan mendapatkan respon dari API check-ongkir dan tampila
     "status": true
 }
 ```
+
+### Membuat Rekap Pembelian
+### Tiket dan Claim
+### Katalog Produk
+> ## Keuangan
+### Pembayaran
+### Penarikan Saldo
+### Cek Saldo
