@@ -1,0 +1,2188 @@
+{
+	"info": {
+		"_postman_id": "b8ccc8ef-9bd9-439d-907a-ec635946ee90",
+		"name": "JuraganCODBackendTransaction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17919789"
+	},
+	"item": [
+		{
+			"name": "ticket",
+			"item": [
+				{
+					"name": "get-title",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}api/ticket/title",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"ticket",
+								"title"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show-ticket",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}api/ticket/",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"ticket",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-ticket",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Claim Breach\",\n    \"no_resi\": \"IDE701057096769\",\n    \"detail\": \"tester api\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/ticket/create",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"ticket",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-status-ticket",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_ticket\": \"TIC20230820034822\",\n    \"status\": 4 \n}\n\n// 0 = pending\n// 1 = approve\n// 2 = rejected\n// 4 = close",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/ticket/update-status",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"ticket",
+								"update-status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-title-ticket",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id_ticket\": \"TIC20230820034822\",\n    \"title\": \"Paket Belum Terpickup\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/ticket/update-title",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"ticket",
+								"update-title"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ticket-claim",
+			"item": [
+				{
+					"name": "ticket-claim-show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}api/claim/",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"claim",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "catalog-product",
+			"item": [
+				{
+					"name": "add-catalog-product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"produk_name\": \"Baju Anak\",\n    \"weight\": 200,\n    \"qty\": 20,\n    \"price\":40000,\n    \"dimensions\": 0,\n    \"heavy\": 10,\n    \"long\": 0,\n    \"wide\": 0,\n    \"Height\":0,\n    \"notes\": \"baju murah anak-anak\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/product/create",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-catalog-product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"produk_name\": \"Baju Dewasa\",\n    \"weight\": 200,\n    \"qty\": 20,\n    \"price\":40000,\n    \"dimensions\": 0,\n    \"long\": 0,\n    \"wide\": 0,\n    \"hight\":0,\n    \"notes\": \"baju murah dewasa\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/product/update/96374",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"product",
+								"update",
+								"96374"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show-catalog-product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/product/",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show-catalog-product-by-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"produk_name\": \"Baju Anak\",\n    \"weight\": 200,\n    \"qty\": 20,\n    \"price\":40000,\n    \"dimensions\": 0,\n    \"long\": 0,\n    \"wide\": 0,\n    \"hight\":0,\n    \"notes\": \"baju murah anak-anak\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/product/96373",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"product",
+								"96373"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-catalog-product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"produk_name\": \"Baju Anak\",\n    \"weight\": 200,\n    \"qty\": 20,\n    \"price\":40000,\n    \"dimensions\": 0,\n    \"long\": 0,\n    \"wide\": 0,\n    \"hight\":0,\n    \"notes\": \"baju murah anak-anak\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/product/delete/96373",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"product",
+								"delete",
+								"96373"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api-expedisi (backend only)",
+			"item": [
+				{
+					"name": "request-price",
+					"item": [
+						{
+							"name": "jdl",
+							"item": [
+								{
+									"name": "login",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"pt.krislan6317\",\n    \"password\": \"nB!63706\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://ext-api.jdlexpress.co.id/cek-ongkir/api/auth/login",
+											"protocol": "https",
+											"host": [
+												"ext-api",
+												"jdlexpress",
+												"co",
+												"id"
+											],
+											"path": [
+												"cek-ongkir",
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "ncs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.ptncs.com/bot/checkpricejuragancod/juragancod/{{api_key_ncs}}?origin=327609&destination=331810&weight=1",
+									"protocol": "https",
+									"host": [
+										"api",
+										"ptncs",
+										"com"
+									],
+									"path": [
+										"bot",
+										"checkpricejuragancod",
+										"juragancod",
+										"{{api_key_ncs}}"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "327609"
+										},
+										{
+											"key": "destination",
+											"value": "331810"
+										},
+										{
+											"key": "weight",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sicepat",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "api-key",
+										"value": "bc9b08811baf769e052ed3ad1d63fdd2",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://apitrek.sicepat.com/customer/tariff?origin=JOG&destination=SMI10042&weight=100",
+									"protocol": "https",
+									"host": [
+										"apitrek",
+										"sicepat",
+										"com"
+									],
+									"path": [
+										"customer",
+										"tariff"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "JOG"
+										},
+										{
+											"key": "destination",
+											"value": "SMI10042"
+										},
+										{
+											"key": "weight",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "anteraja",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access-key-id",
+										"value": "Anteraja_x_juragancod",
+										"type": "text"
+									},
+									{
+										"key": "secret-access-key",
+										"value": "dZwvt7tRffTa8o7R0oWQahle",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"origin\": \"34.71.14\",\n    \"destination\": \"32.02.32\",\n    \"weight\": \"1000\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://doit.anteraja.id/krislanjayatransjuragancod/serviceRates",
+									"protocol": "https",
+									"host": [
+										"doit",
+										"anteraja",
+										"id"
+									],
+									"path": [
+										"krislanjayatransjuragancod",
+										"serviceRates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "jne",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "username",
+										"value": "JURAGANCOD",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "api_key",
+										"value": "8d3433e87e3498f76d1d1f8351bc1e3b",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "username=JURAGANCOD&api_key=8d3433e87e3498f76d1d1f8351bc1e3b&from=SMI10042&thru=JOG10000&weight=1000"
+								},
+								"url": {
+									"raw": "http://apiv2.jne.co.id:10101/tracing/api/pricedev",
+									"protocol": "http",
+									"host": [
+										"apiv2",
+										"jne",
+										"co",
+										"id"
+									],
+									"port": "10101",
+									"path": [
+										"tracing",
+										"api",
+										"pricedev"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "JURAGANCOD",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "8d3433e87e3498f76d1d1f8351bc1e3b",
+											"disabled": true
+										},
+										{
+											"key": "from",
+											"value": "SMI10042",
+											"disabled": true
+										},
+										{
+											"key": "thru",
+											"value": "JOG10000",
+											"disabled": true
+										},
+										{
+											"key": "weight",
+											"value": "1000",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "id-xpress",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "data",
+											"value": "{\"senderCityId\":\"113\",\"recipientDistrictId\":\"15273\",\"weight\":\"100\",\"expressType\":\"00\"}",
+											"type": "text"
+										},
+										{
+											"key": "appId",
+											"value": "935286388",
+											"type": "text"
+										},
+										{
+											"key": "sign",
+											"value": "3a20f3cd7c957c67bea9d30381e6baf7",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://rest.idexpress.com/open/v1/waybill/get-standard-fee?senderCityId=113&recipientDistrictId=15273&weight=10&expressType=00",
+									"protocol": "https",
+									"host": [
+										"rest",
+										"idexpress",
+										"com"
+									],
+									"path": [
+										"open",
+										"v1",
+										"waybill",
+										"get-standard-fee"
+									],
+									"query": [
+										{
+											"key": "senderCityId",
+											"value": "113"
+										},
+										{
+											"key": "recipientDistrictId",
+											"value": "15273"
+										},
+										{
+											"key": "weight",
+											"value": "10"
+										},
+										{
+											"key": "expressType",
+											"value": "00"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sap",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "api_key",
+										"value": "JuR4gAnC0d_#2022",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "origin",
+											"value": "YO0507",
+											"type": "text"
+										},
+										{
+											"key": "destination",
+											"value": "YO0511",
+											"type": "text"
+										},
+										{
+											"key": "weight",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "customer_code",
+											"value": "PKL059626",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.coresyssap.com/master/shipment_cost_special/special",
+									"protocol": "https",
+									"host": [
+										"api",
+										"coresyssap",
+										"com"
+									],
+									"path": [
+										"master",
+										"shipment_cost_special",
+										"special"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create-order",
+					"item": [
+						{
+							"name": "ncs",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"accno\": \"4233752000100013\",\n    \"comname\": \"JuraganCOD\",\n    \"pickpoint\": \"Toko berkah\",\n    \"pickaddress\": \"Jl. Margasari\",\n    \"pickcp\": \"Jimmy\",\n    \"pickphone\": \"081327694998\",\n    \"pickkecid\": \"327609\",\n    \"pickzip\": \"16514\",\n    \"pickdate\": \"2023-09-17 16:30:00\",\n    \"pickemail\": \"juragancod@gmail.com\",\n    \"picktimefrom\": \"2023-09-17 18:30:00\",\n    \"picktimeto\":  \"2023-09-17 20:30:00\",\n    \"picktransport\": \"101\",\n    \"picktype\":\"1\",\n    \"transaction\": [{\n        \"refno\": \"JC082009300\",\n        \"s_add1\": \"Jl. Margasari\",\n        \"s_add2\": \"CINERE\",\n        \"s_add3\": \"KOTA DEPOK\",\n        \"s_add4\": \"JAWA BARAT\",\n        \"s_kecid\": \"327609\",\n        \"s_zip\": \"16514\",\n        \"s_phnno\": \"081327694998\",\n        \"s_email\": \"juragancod@gmail.com\",\n        \"c_cnename\": \"Ali Rozikin\",\n        \"c_add1\": \"Jl. Pati Jaya\",\n        \"c_add2\": \"PATI\",\n        \"c_add3\": \"KAB PATI\",\n        \"c_add4\": \"JAWA TENGAH\",\n        \"c_kecid\":\"331810\",\n        \"c_zip\":\"59114\",\n        \"c_phnno\": \"085791419625\",\n        \"c_email\":\"suportjuragancod@gmail.com\",\n        \"value\": 10000,\n        \"service\": \"NRS(Regular Service)\",\n        \"specinstruction\": \"catatan\",\n        \"weight\": 1.0,\n        \"vweight\": 1.0,\n        \"content\": \"Baju Mukenah\",\n        \"pieces\": 1,\n        \"FlagNFD\": 0,\n        \"Length\": 10,\n        \"Width\": 10,\n        \"Height\": 10,\n        \"DeliveryPrice\": \"10000\",\n        \"insuranceprice\": \"1000\",\n        \"CODType\":\"\",\n        \"FlagFee\":\"1\",\n        \"CODAmount\":10000\n    }]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://sandbox-api.ptncs.com/bot/picktranscargo/juragancoddemo/demo",
+									"protocol": "https",
+									"host": [
+										"sandbox-api",
+										"ptncs",
+										"com"
+									],
+									"path": [
+										"bot",
+										"picktranscargo",
+										"juragancoddemo",
+										"demo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "antaraja",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access-key-id",
+										"value": "Anteraja_x_juragancod",
+										"type": "text"
+									},
+									{
+										"key": "secret-access-key",
+										"value": "dZwvt7tRffTa8o7R0oWQahle",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"booking_id\": \"JCOD-2839388\",\n    \"invoice_no\": \"JC082009300\",\n    \"service_code\": \"REG\",\n    \"parcel_total_weight\": 1000,\n    \"shipper\": {\n        \"name\": \"Jimmy\",\n        \"phone\": \"081327694998\",\n        \"email\": \"juragancod@gmail.com\",\n        \"district\": \"32.76.09\",\n        \"address\": \"Jl. Jimmy Nyonya\",\n        \"postcode\": \"16514\",\n        \"geoloc\": \"\"\n    },\n    \"receiver\": {\n        \"name\": \"Ali Rozikin\",\n        \"phone\": \"08572839938\",\n        \"email\": \"\",\n        \"district\": \"33.18.10\",\n        \"address\": \"Jl. Pati Raya\",\n        \"postcode\": \"59114\",\n        \"geoloc\": \"\"\n    },\n    \"items\": [\n        {\n            \"item_name\": \"Baju Anak\",\n            \"item_desc\": \"\",\n            \"item_category\": \"\",\n            \"item_quantity\": 1,\n            \"declared_value\": 10000,\n            \"weight\": 100\n        }\n    ],\n    \"use_insurance\": false,\n    \"declared_value\": 10000,\n    \"expect_time\": \"2023-09-29 15:00:00\",\n    \"is_cod\": false,\n    \"cod_amount\": 0,\n    \"insurance_price\": 0\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://doit.anteraja.id/krislanjayatransjuragancod/order",
+									"protocol": "https",
+									"host": [
+										"doit",
+										"anteraja",
+										"id"
+									],
+									"path": [
+										"krislanjayatransjuragancod",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "jne",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "JURAGANCOD",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "8d3433e87e3498f76d1d1f8351bc1e3b",
+											"type": "text"
+										},
+										{
+											"key": "PICKUP_NAME",
+											"value": "JuraganCOD",
+											"type": "text"
+										},
+										{
+											"key": "PICKUP_DATE",
+											"value": "15-09-2023",
+											"type": "text"
+										},
+										{
+											"key": "PICKUP_TIME",
+											"value": "16:00",
+											"type": "text"
+										},
+										{
+											"key": "PICKUP_PIC",
+											"value": "Bagas Satrio",
+											"type": "text"
+										},
+										{
+											"key": "PICKUP_PIC_PHONE",
+											"value": "08578293893889",
+											"type": "text"
+										},
+										{
+											"key": "PICKUP_ADDRESS",
+											"value": "Jl Pati Raya",
+											"type": "text"
+										},
+										{
+											"key": "PICKUP_DISTRICT",
+											"value": "PATI",
+											"type": "text"
+										},
+										{
+											"key": "PICKUP_CITY",
+											"value": "KABUPATEN PATI",
+											"type": "text"
+										},
+										{
+											"key": "PICKUP_SERVICE",
+											"value": "REG",
+											"type": "text"
+										},
+										{
+											"key": "PICKUP_VEHICLE",
+											"value": "Motor",
+											"type": "text"
+										},
+										{
+											"key": "BRANCH",
+											"value": "SRG20900000",
+											"type": "text"
+										},
+										{
+											"key": "CUST_ID",
+											"value": "80948800",
+											"type": "text"
+										},
+										{
+											"key": "ORDER_ID",
+											"value": "JNETESTCODJ929",
+											"type": "text"
+										},
+										{
+											"key": "SHIPPER_NAME",
+											"value": "Bagas Satrio",
+											"type": "text"
+										},
+										{
+											"key": "SHIPPER_ADDR1",
+											"value": "Jl Pati Raya",
+											"type": "text"
+										},
+										{
+											"key": "SHIPPER_ADDR2",
+											"value": "PATI",
+											"type": "text"
+										},
+										{
+											"key": "SHIPPER_ADDR3",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "SHIPPER_CITY",
+											"value": "KAB PATI",
+											"type": "text"
+										},
+										{
+											"key": "SHIPPER_ZIP",
+											"value": "59158",
+											"type": "text"
+										},
+										{
+											"key": "SHIPPER_REGION",
+											"value": "JAWA TENGAH",
+											"type": "text"
+										},
+										{
+											"key": "SHIPPER_COUNTRY",
+											"value": "INDONESIA",
+											"type": "text"
+										},
+										{
+											"key": "SHIPPER_CONTACT",
+											"value": "Bagas Satrio",
+											"type": "text"
+										},
+										{
+											"key": "SHIPPER_PHONE",
+											"value": "08578293893889",
+											"type": "text"
+										},
+										{
+											"key": "RECEIVER_NAME",
+											"value": "Ali Rozikin",
+											"type": "text"
+										},
+										{
+											"key": "RECEIVER_ADDR1",
+											"value": "Depok Raya",
+											"type": "text"
+										},
+										{
+											"key": "RECEIVER_ADDR2",
+											"value": "Depok",
+											"type": "text"
+										},
+										{
+											"key": "RECEIVER_ADDR3",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "RECEIVER_CITY",
+											"value": "KOTA DEPOK",
+											"type": "text"
+										},
+										{
+											"key": "RECEIVER_ZIP",
+											"value": "16514",
+											"type": "text"
+										},
+										{
+											"key": "RECEIVER_REGION",
+											"value": "JAWA BARAT",
+											"type": "text"
+										},
+										{
+											"key": "RECEIVER_COUNTRY",
+											"value": "INDONESIA",
+											"type": "text"
+										},
+										{
+											"key": "RECEIVER_CONTACT",
+											"value": "0856737763782",
+											"type": "text"
+										},
+										{
+											"key": "RECEIVER_PHONE",
+											"value": "0856737763782",
+											"type": "text"
+										},
+										{
+											"key": "ORIGIN_CODE",
+											"value": "DPK10000",
+											"type": "text"
+										},
+										{
+											"key": "DESTINATION_CODE",
+											"value": "SRG20903",
+											"type": "text"
+										},
+										{
+											"key": "SERVICE_CODE",
+											"value": "REG",
+											"type": "text"
+										},
+										{
+											"key": "WEIGHT",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "QTY",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "GOODS_DESC",
+											"value": "Baju Anak",
+											"type": "text"
+										},
+										{
+											"key": "GOODS_AMOUNT",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "INSURANCE_FLAG",
+											"value": "N",
+											"type": "text"
+										},
+										{
+											"key": "SPECIAL_INS",
+											"value": "Baju anak-anak",
+											"type": "text"
+										},
+										{
+											"key": "MERCHANT_ID",
+											"value": "211022",
+											"type": "text"
+										},
+										{
+											"key": "TYPE",
+											"value": "PICKUP",
+											"type": "text"
+										},
+										{
+											"key": "COD_FLAG",
+											"value": "Y",
+											"type": "text"
+										},
+										{
+											"key": "COD_AMOUNT",
+											"value": "15000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://apiv2.jne.co.id:10101/pickupcashless",
+									"protocol": "http",
+									"host": [
+										"apiv2",
+										"jne",
+										"co",
+										"id"
+									],
+									"port": "10101",
+									"path": [
+										"pickupcashless"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sicepat",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"auth_key\": \"86C7A2647E434C08A169C230B80481F6\",\n    \"reference_number\": \"GH36737\",\n    \"pickup_request_date\": \"2023-09-16 12:00\",\n    \"pickup_method\": \"PICKUP\",\n    \"pickup_merchant_name\": \"JuraganCOD\",\n    \"pickup_address\": \"Pati\",\n    \"pickup_city\": \"KAB PATI\",\n    \"pickup_merchant_phone\": \"0856377487382\",\n    \"pickup_merchant_email\": \"juragancod@gmail.com\",\n    \"PackageList\": [{\n        \"receipt_number\": \"005037369960\",\n        \"origin_code\": \"PAT\",\n        \"delivery_type\": \"REG\",\n        \"parcel_category\": \"NORMAL\",\n        \"parcel_content\": \"Baju Anak\",\n        \"parcel_qty\": 1,\n        \"parcel_uom\": \"Pcs\",\n        \"parcel_value\": 10000,\n        \"cod_value\": 15000,\n        \"insurance_value\": 0,\n        \"total_weight\": 4,\n        \"parcel_length\": 2,\n        \"parcel_width\": 2,\n        \"parcel_height\": 2,\n\n        \"shipper_name\": \"Bagas Satrio\",\n        \"shipper_address\": \"PATI\",\n        \"shipper_province\": \"JAWA TENGAH\",\n        \"shipper_city\": \"KAB PATI\",\n        \"shipper_district\": \"DUKUHSETI\",\n        \"shipper_zip\": \"59158\",\n        \"shipper_phone\": \"085738749927\",\n\n        \"recipient_title\": \"Mr\",\n        \"recipient_name\": \"Ali Rozikin\",\n        \"recipient_address\": \"Depok Jaya\",\n        \"recipient_province\": \"JAWA BARAT\",\n        \"recipient_city\": \"KOTA DEPOK\",\n        \"recipient_district\": \"CINERE\",\n        \"recipient_zip\": \"16514\",\n        \"recipient_phone\": \"08394784578543\",\n        \"destination_code\": \"DPK10067\",\n        \"notes\": \"tester\"\n    }]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://pickup.sicepat.com/api/partner/requestpickuppackage",
+									"protocol": "https",
+									"host": [
+										"pickup",
+										"sicepat",
+										"com"
+									],
+									"path": [
+										"api",
+										"partner",
+										"requestpickuppackage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sap",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "api-key",
+										"value": "DEV_m4rK3tPlac3#_2019",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\t\"customer_code\": \"PKL059626\",\n\t\t\"reference_no\": \"TGH36739\",\n\t\t\"pickup_name\": \"JuraganCOD\",\n\t\t\"pickup_address\": \"Pati\",\n\t\t\"pickup_phone\": \"0856377487382\",\n\t\t\"pickup_place\": 1,\n\t\t\"pickup_email\": \"juragancod@gmail.com\",\n\t\t\"pickup_postal_code\": \"59158\",\n\t\t\"pickup_contact\": \"Bagas Satrio\",\n\t\t\"pickup_district_code\": \"JT1703\",\n\t\t\"service_type_code\": \"UDRREG\",\n\t\t\"quantity\": 1,\n\t\t\"total_item\": 1,\n\t\t\"weight\": 100,\n\t\t\"volumetric\": \"2 x 2 x 2\",\n\t\t\"shipment_type_code\": \"SHTPC\",\n\t\t\"description_item\": \"Baju Anak\",\n\t\t\"item_value\": 10000,\n\t\t\"insurance_flag\": 1,\n\t\t\"insurance_type_code\": \"\",\n\t\t\"insurance_value\": 0,\n\t\t\"cod_flag\": 2,\n\t\t\"cod_value\": 0,\n\t\t\"shipper_name\": \"Bagas Satrio\",\n\t\t\"shipper_address\": \"Pati\",\n\t\t\"shipper_phone\": \"085738749922\",\n\t\t\"destination_district_code\": \"JB1208\",\n\t\t\"receiver_name\": \"Ali Rozikin\",\n\t\t\"receiver_address\": \"Depok\",\n\t\t\"receiver_phone\": \"0838928937672\",\n\t\t\"special_instruction\": \"notes\"\n\t}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://apisanbox.coresyssap.com/shipment/pickup/single_push",
+									"protocol": "http",
+									"host": [
+										"apisanbox",
+										"coresyssap",
+										"com"
+									],
+									"path": [
+										"shipment",
+										"pickup",
+										"single_push"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "id-express",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "data",
+											"value": "{\n  \"orderTime\": \"2023-08-26 20:12:13\",\n  \"orderNo\": \"JC1693055532907483069\",\n  \"expressType\": \"00\",\n  \"itemName\": \"Baju Anak\",\n  \"insured\": \"1\",\n  \"itemRemarks\": \"Baju anak-anak\",\n  \"itemQuantity\": 1,\n  \"itemCategory\": \"00\",\n  \"weight\": 0.5,\n  \"width\": 0,\n  \"length\": 0,\n  \"height\": 0,\n  \"serviceType\": \"00\",\n  \"itemValue\": 10000,\n  \"senderName\": \"HAAH Project\",\n  \"senderCellPhone\": \"081381817272\",\n  \"senderCityId\": \"52\",\n  \"senderDistrictId\": \"15043\",\n  \"senderAddress\": \"Jl. Pahlawan Perum As-sunnah 2 Blok C16 Depan E1 Kp. Tengah Cileungsi\",\n  \"recipientName\": \"Sulistari\",\n  \"recipientCellPhone\": \"08579142977\",\n  \"recipientCityId\": \"96\",\n  \"recipientDistrictId\": \"15493\",\n  \"recipientAddress\": \"Jl. Sendorow\",\n  \"paymentType\": \"01\",\n  \"codAmount\": 20000,\n  \"pickupStartTime\": \"1693062733\",\n  \"pickupEndTime\": \"1693077133\"\n}",
+											"type": "text"
+										},
+										{
+											"key": "appId",
+											"value": "1596402075",
+											"type": "text"
+										},
+										{
+											"key": "sign",
+											"value": "339215779f0d6979a37d816d9f369018",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api-stg.idexpress.tech/open/v1/waybill/create",
+									"protocol": "https",
+									"host": [
+										"api-stg",
+										"idexpress",
+										"tech"
+									],
+									"path": [
+										"open",
+										"v1",
+										"waybill",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tracking",
+					"item": [
+						{
+							"name": "tracking-ncs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api2.ptncs.com/bot/trackingcompletegeneric/juragancod/anVyYWdhbmNvZG5jczIwMjI=?awb=3100001558105",
+									"protocol": "https",
+									"host": [
+										"api2",
+										"ptncs",
+										"com"
+									],
+									"path": [
+										"bot",
+										"trackingcompletegeneric",
+										"juragancod",
+										"anVyYWdhbmNvZG5jczIwMjI="
+									],
+									"query": [
+										{
+											"key": "awb",
+											"value": "3100001558105"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "tracking-antaraja",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access-key-id",
+										"value": "Anteraja_x_juragancod",
+										"type": "text"
+									},
+									{
+										"key": "secret-access-key",
+										"value": "dZwvt7tRffTa8o7R0oWQahle",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"waybill_no\": \"10007145527605\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://doit.anteraja.id/krislanjayatransjuragancod/tracking",
+									"protocol": "https",
+									"host": [
+										"doit",
+										"anteraja",
+										"id"
+									],
+									"path": [
+										"krislanjayatransjuragancod",
+										"tracking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "tracking-jne",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access-key-id",
+										"value": "Anteraja_x_juragancod",
+										"type": "text"
+									},
+									{
+										"key": "secret-access-key",
+										"value": "dZwvt7tRffTa8o7R0oWQahle",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "JURAGANCOD",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "8d3433e87e3498f76d1d1f8351bc1e3b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://apiv2.jne.co.id:10101/tracing/api/list/v1/cnote/0257292300024950",
+									"protocol": "http",
+									"host": [
+										"apiv2",
+										"jne",
+										"co",
+										"id"
+									],
+									"port": "10101",
+									"path": [
+										"tracing",
+										"api",
+										"list",
+										"v1",
+										"cnote",
+										"0257292300024950"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "tracking-sicepat",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "access-key-id",
+										"value": "Anteraja_x_juragancod",
+										"type": "text"
+									},
+									{
+										"key": "secret-access-key",
+										"value": "dZwvt7tRffTa8o7R0oWQahle",
+										"type": "text"
+									},
+									{
+										"key": "api-key",
+										"value": "bc9b08811baf769e052ed3ad1d63fdd2",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "JURAGANCOD",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "8d3433e87e3498f76d1d1f8351bc1e3b",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://apitrek.sicepat.com/customer/waybill?waybill=005037320001",
+									"protocol": "https",
+									"host": [
+										"apitrek",
+										"sicepat",
+										"com"
+									],
+									"path": [
+										"customer",
+										"waybill"
+									],
+									"query": [
+										{
+											"key": "waybill",
+											"value": "005037320001"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "tracking-sap",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "api_key",
+										"value": "JuR4gAnC0d_#2022",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "JURAGANCOD",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "api_key",
+											"value": "8d3433e87e3498f76d1d1f8351bc1e3b",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://track.coresyssap.com/shipment/tracking/awb?awb_no=JRG00125088322",
+									"protocol": "http",
+									"host": [
+										"track",
+										"coresyssap",
+										"com"
+									],
+									"path": [
+										"shipment",
+										"tracking",
+										"awb"
+									],
+									"query": [
+										{
+											"key": "awb_no",
+											"value": "JRG00125088322"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "tracking-id_express",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "https://rest.idexpress.com/open/v1/waybill/get-tracking?appId=935286388&data=IDE704205556578&sign=1ac50f5adaac1feef535755d61bbfe7b",
+									"protocol": "https",
+									"host": [
+										"rest",
+										"idexpress",
+										"com"
+									],
+									"path": [
+										"open",
+										"v1",
+										"waybill",
+										"get-tracking"
+									],
+									"query": [
+										{
+											"key": "appId",
+											"value": "935286388"
+										},
+										{
+											"key": "data",
+											"value": "IDE704205556578"
+										},
+										{
+											"key": "sign",
+											"value": "1ac50f5adaac1feef535755d61bbfe7b"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "cancel",
+					"item": [
+						{
+							"name": "cancel-ncs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.ptncs.com/bot/voidpickuprequest/juragancod/anVyYWdhbmNvZG5jczIwMjI=?refno=JC1693188132165105091&reason=101&reasonname=BarangBelumSiap&requestor=JuraganCOD",
+									"protocol": "https",
+									"host": [
+										"api",
+										"ptncs",
+										"com"
+									],
+									"path": [
+										"bot",
+										"voidpickuprequest",
+										"juragancod",
+										"anVyYWdhbmNvZG5jczIwMjI="
+									],
+									"query": [
+										{
+											"key": "refno",
+											"value": "JC1693188132165105091"
+										},
+										{
+											"key": "reason",
+											"value": "101"
+										},
+										{
+											"key": "reasonname",
+											"value": "BarangBelumSiap"
+										},
+										{
+											"key": "requestor",
+											"value": "JuraganCOD"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cancel-sap",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "api_key",
+										"value": "JuR4gAnC0d_#2022",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"awb_no\": \"JRG00132335964\",\n    \"desc\": \"CANCEL ORDER\",\n    \"cancel_date\": \"2023-08-28 09:35:00\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.coresyssap.com/shipment/pickup/cancel",
+									"protocol": "https",
+									"host": [
+										"api",
+										"coresyssap",
+										"com"
+									],
+									"path": [
+										"shipment",
+										"pickup",
+										"cancel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cancel-sicepat",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "api_key",
+										"value": "JuR4gAnC0d_#2022",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"auth_key\": \"86C7A2647E434C08A169C230B80481F6\",\n    \"receipt_number\": \"005037369960\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://pickup.sicepat.com/api/partner/cancelpickup",
+									"protocol": "https",
+									"host": [
+										"pickup",
+										"sicepat",
+										"com"
+									],
+									"path": [
+										"api",
+										"partner",
+										"cancelpickup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cancel-jne",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access-key-id",
+										"value": "Anteraja_x_juragancod",
+										"type": "text"
+									},
+									{
+										"key": "secret-access-key",
+										"value": "dZwvt7tRffTa8o7R0oWQahle",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "JURAGANCOD",
+											"type": "text"
+										},
+										{
+											"key": "api_key",
+											"value": "8d3433e87e3498f76d1d1f8351bc1e3b",
+											"type": "text"
+										},
+										{
+											"key": "cnote_no",
+											"value": "3039622300023439",
+											"type": "text"
+										},
+										{
+											"key": "pic_cancel",
+											"value": "JURAGANCOD",
+											"type": "text"
+										},
+										{
+											"key": "reason_cancel",
+											"value": "Cancel",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://apiv2.jne.co.id:10101/order/cancel",
+									"protocol": "http",
+									"host": [
+										"apiv2",
+										"jne",
+										"co",
+										"id"
+									],
+									"port": "10101",
+									"path": [
+										"order",
+										"cancel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cancel-idexpress",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "data",
+											"value": "{\n  \"waybillNo\": \"IDE700232418613\"\n}",
+											"type": "text"
+										},
+										{
+											"key": "appId",
+											"value": "935286388",
+											"type": "text"
+										},
+										{
+											"key": "sign",
+											"value": "0d4f199942b2a2b1a57a1c79928083de",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://rest.idexpress.com/open/v1/waybill/cancel",
+									"protocol": "https",
+									"host": [
+										"rest",
+										"idexpress",
+										"com"
+									],
+									"path": [
+										"open",
+										"v1",
+										"waybill",
+										"cancel"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cancel-antaraja",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access-key-id",
+										"value": "Anteraja_x_juragancod",
+										"type": "text"
+									},
+									{
+										"key": "secret-access-key",
+										"value": "dZwvt7tRffTa8o7R0oWQahle",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"waybill_no\": \"10007709813270\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://doit.anteraja.id/krislanjayatransjuragancod/cancelOrder",
+									"protocol": "https",
+									"host": [
+										"doit",
+										"anteraja",
+										"id"
+									],
+									"path": [
+										"krislanjayatransjuragancod",
+										"cancelOrder"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ongkir",
+			"item": [
+				{
+					"name": "check-ongkir",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"weight\": 1000,\n    \"dimensions_Weight\": 100,\n    \"id_city_recepient\":3233,\n    \"id_city_sender\":1953\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/ongkir/show",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"ongkir",
+								"show"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "delivery",
+			"item": [
+				{
+					"name": "delivery-show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local_url}}api/delivery",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"delivery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delivery-search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/delivery/search?start_date=2023-01-02&end_date=2023-01-03&resi_number=IDE702818422734&recepient&expedition=jne&status=pickup&print=1",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"delivery",
+								"search"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2023-01-02"
+								},
+								{
+									"key": "end_date",
+									"value": "2023-01-03"
+								},
+								{
+									"key": "resi_number",
+									"value": "IDE702818422734"
+								},
+								{
+									"key": "recepient",
+									"value": null,
+									"description": "penerima name"
+								},
+								{
+									"key": "expedition",
+									"value": "jne",
+									"description": "jne, id_express, sap, ncs, anteraja"
+								},
+								{
+									"key": "status",
+									"value": "pickup",
+									"description": "pickup, dropoff, "
+								},
+								{
+									"key": "print",
+									"value": "1",
+									"description": "1, 0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "create-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"service\": \"ncs\",\n    \"service_code\": \"UDRREG\",\n    \"pickup_type\": \"pickup\",\n    \"transaction_type\": 0,\n    \"shipment_id\": 50,\n    \"recepient_id\": 0,\n    \"recepient_name\": \"Sulistari\",\n    \"recepient_phone\": \"08579142977\",\n    \"recepient_city_id\": 2934,\n    \"recepient_address\": \"Jl. Sendorow\",\n    \"etd\": \"3-5 Hari\",\n    \"insurance\": 0,\n    \"custome_cod\": 0,\n    \"ongkir\": 10000,\n    \"cod\": 1,\n    \"cod_fee\": 1000,\n    \"total\": 11000,\n    \"disbursement\": 10000,\n    \"parcel_id\": 1,\n    \"parcel_price\": 10000,\n    \"parcel_name\": \"Baju Anak\",\n    \"parcel_desc\": \"Baju anak-anak\",\n    \"parcel_qty\": 1,\n    \"parcel_weight\": 0.5,\n    \"parcel_wide\": 0.1,\n    \"parcel_dimensions\": 1,\n    \"parcel_long\": 0.1,\n    \"parcel_height\": 0.1,\n    \"ongkir_discount\": 0,\n    \"dimensions_weight\": 1.0,\n    \"weight\": 0.5\n}\n//pickup/dropoff",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url_81}}api/order/create",
+							"host": [
+								"{{local_url_81}}api"
+							],
+							"path": [
+								"order",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "report",
+			"item": [
+				{
+					"name": "purchase",
+					"item": [
+						{
+							"name": "rekap-pembelian",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{local_url}}api/report/purchase",
+									"host": [
+										"{{local_url}}api"
+									],
+									"path": [
+										"report",
+										"purchase"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "rekap-pembelian-search",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{local_url}}api/report/purchase/search?start_date=2023-05-05&end_date=2023-07-08",
+									"host": [
+										"{{local_url}}api"
+									],
+									"path": [
+										"report",
+										"purchase",
+										"search"
+									],
+									"query": [
+										{
+											"key": "start_date",
+											"value": "2023-05-05"
+										},
+										{
+											"key": "end_date",
+											"value": "2023-07-08"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "order-trouble",
+			"item": [
+				{
+					"name": "order-trouble-list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}api/order/trouble",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"order",
+								"trouble"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "recepient",
+			"item": [
+				{
+					"name": "recepient-list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}api/recepient",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"recepient"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "dashboard",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/dashboard/",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"dashboard",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pdf",
+			"item": [
+				{
+					"name": "recepient-pdf",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{local_url}}api/recepient/pdf",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"recepient",
+								"pdf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tracking",
+			"item": [
+				{
+					"name": "tracking-show",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"awb\":\"0257292300024950\",\n    \"courier\":\"jne\" \n}\n\n // anteraja, ncs, jne, id_express, sicepat, sap",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/tracking",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"tracking"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cancel",
+			"item": [
+				{
+					"name": "cancel-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"no_reff\":\"JC1693215590645473985\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url_81}}api/order/cancel",
+							"host": [
+								"{{local_url_81}}api"
+							],
+							"path": [
+								"order",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

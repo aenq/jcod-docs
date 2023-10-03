@@ -1,0 +1,1030 @@
+{
+	"info": {
+		"_postman_id": "d80e523b-4f61-4801-b35c-2dea36a21159",
+		"name": "JuraganCODBackendUsers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17919789"
+	},
+	"item": [
+		{
+			"name": "authentication",
+			"item": [
+				{
+					"name": "register-seller",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\": \"M Dhifta\",\n    \"email\": \"dhifta48@gmail.com\",\n    \"password\": \"123456\",\n    \"phone_number\":\"6285791419626\",\n    \"code_referal\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/sign-up",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login-seller",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"hifisaputra1@gmail.com\",\n    \"password\": \"123456\"    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/sign-in",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"sign-in"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profil",
+			"item": [
+				{
+					"name": "profil",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{local_url}}api/profil",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"profil"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-profil",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\": \"M Dhifta\",\n    \"phone_number\": \"6285791419625\",\n    \"no_rekening\": \"78293048487\",\n    \"bank_name\": \"BCA\",\n    \"name_rekening\":\"M Dhifta\",\n    \"cabang_id\": \"28\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/profil/update",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"profil",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_password\": \"123456\",\n    \"new_password\": \"123456\",\n    \"confirm_password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/profil/update-password",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"profil",
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verification-ktp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ktp",
+									"type": "file",
+									"src": "/home/mdhifta/Pictures/Yorushika - Sayuumou Lyrics Translation.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_url}}api/profil/upload-ktp",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"profil",
+								"upload-ktp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-photo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mdhifta/Downloads/image.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_url}}api/profil/update-photo",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"profil",
+								"update-photo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "forgot-password",
+			"item": [
+				{
+					"name": "forgot-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"dhifta48@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/send-forgot-password",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"send-forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-forgot-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"verification\": \"hifisaputra1@gmail.com\",\n    \"new_password\": \"123456\",\n    \"confirm_password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/change-forgot-password",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"change-forgot-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "kecamatan/od",
+			"item": [
+				{
+					"name": "get-kecamatan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{prod_url}}api/address/subcity",
+							"host": [
+								"{{prod_url}}api"
+							],
+							"path": [
+								"address",
+								"subcity"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "member",
+			"item": [
+				{
+					"name": "add-member",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4MDAyMiwiaWQiOjEwNDc0fQ.Bi7o6CC69F3Tbp34FFyLXGR0APvjHzoSBYH4gzXXWZw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"seller_email\": \"dhifta48@gmail.com\",\n    \"staff_name\": null,\n    \"password\": \"12345678\",\n    \"password_confirm\": \"12345678\",\n    \"phone_number\": \"6285791419625\",\n    \"hak_pesan\": 1,\n    \"hak_saldo\": 1,\n    \"hak_afiliasi\": 1,\n    \"hak_laporan\": 1,\n    \"hak_alamat\": 1,\n    \"hak_download\": 1,\n    \"status\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/member/add",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"member",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-member",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"seller_email\": \"dhifta44@gmail.com\",\n    \"Staff_name\": \"Erika Anjani\",\n    \"password\": \"\",\n    \"password_confirm\": \"\",\n    \"phone_number\": \"62574785785858\",\n    \"hak_pesan\": 0,\n    \"hak_saldo\": 0,\n    \"hak_afiliasi\": 0,\n    \"hak_laporan\": 0,\n    \"hak_alamat\": 0,\n    \"hak_download\": 0,\n    \"status\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/member/update/9808",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"member",
+								"update",
+								"9808"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-member-show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/member",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"member"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-member-with-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/member/9808",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"member",
+								"9808"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "suggestions",
+			"item": [
+				{
+					"name": "send-suggestion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "rate",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "feedback",
+									"value": "Tester feedback",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Tester message",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mdhifta/Pictures/komi.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local_url}}api/suggestions/add",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"suggestions",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "address",
+			"item": [
+				{
+					"name": "add-address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name_sender\": \"Samsudin\",\n    \"phone_number\": \"6285673830927\",\n    \"address\": \"Jl. Magelang, Sleman\",\n    \"subcity_id\": 12,\n    \"subcity_name\": \"Sleman\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/address/add",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"address",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-address",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name_sender\": \"Ismail\",\n    \"phone_number\": \"6285673830927\",\n    \"address\": \"Jl. Magelang, Sleman\",\n    \"subcity_id\": 1,\n    \"subcity_name\": \"Sleman\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/address/update/4265",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"address",
+								"update",
+								"4265"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local_url}}api/address/change/4265",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"address",
+								"change",
+								"4265"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-by-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/address/4265",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"address",
+								"4265"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-address",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{prod_url}}api/address",
+							"host": [
+								"{{prod_url}}api"
+							],
+							"path": [
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-address",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NDgwOTA2NCwiaWQiOjk1ODJ9.M7i5WUNgUfeckzWunQR9KAmECunBo46036vHeht12eg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url}}api/address/delete/4265",
+							"host": [
+								"{{local_url}}api"
+							],
+							"path": [
+								"address",
+								"delete",
+								"4265"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "activation",
+			"item": [
+				{
+					"name": "email-verification",
+					"item": [
+						{
+							"name": "send-email-verification",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"dhifta48@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}api/send-verification-email",
+									"host": [
+										"{{local_url}}api"
+									],
+									"path": [
+										"send-verification-email"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verification-email",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}verification-email/8HDIKToUQo0k4IrCiXkkSj1M",
+									"host": [
+										"{{local_url}}verification-email"
+									],
+									"path": [
+										"8HDIKToUQo0k4IrCiXkkSj1M"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "otp-verification",
+					"item": [
+						{
+							"name": "verification-otp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"otp\": 108268,\n    \"phone_number\": \"6285673830927\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}api/verification-otp",
+									"host": [
+										"{{local_url}}api"
+									],
+									"path": [
+										"verification-otp"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "sender-verification",
+			"item": [
+				{
+					"name": "otp",
+					"item": [
+						{
+							"name": "resend-otp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"verification\": \"6285791419625\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}api/resend-otp",
+									"host": [
+										"{{local_url}}api"
+									],
+									"path": [
+										"resend-otp"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "validation",
+			"item": [
+				{
+					"name": "email",
+					"item": [
+						{
+							"name": "email-check-validation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"dhifta48@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{prod_url}}api/validation-email",
+									"host": [
+										"{{prod_url}}api"
+									],
+									"path": [
+										"validation-email"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "otp",
+					"item": [
+						{
+							"name": "otp-check-validation",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"verification\": \"dhifta48@gmail.com\",\n    \"otp\":\"224067\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url}}api/validation-otp",
+									"host": [
+										"{{local_url}}api"
+									],
+									"path": [
+										"validation-otp"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "whatsapp (backend-only)",
+			"item": [
+				{
+					"name": "check-whatsapp",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://web.whatsapp.com/send?phone=36737637&text&app_absent=0",
+							"protocol": "https",
+							"host": [
+								"web",
+								"whatsapp",
+								"com"
+							],
+							"path": [
+								"send"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "36737637"
+								},
+								{
+									"key": "text",
+									"value": null
+								},
+								{
+									"key": "app_absent",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-whatsapp-api",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "EABZAUdZCqzUxQBAF7x9v5xKAb7Bajil3ZBTELv3pppnsjDCZCSXdbHRFRY5TAfVh6QyE7Ejndu1Qfw6ZAeZAvqY6PGbY7419PZCWP7ShnmHjLrHalAjoIpuQPCNgGBf1Ynx8o8zjMHTRoyigZBdCsFePIgmJaQS62M8LMVybZAIVuLKarvyzYIbMelbXZCGiFG29ZBkQ7aRag79QwZDZD",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"messaging_product\": \"whatsapp\",\n    \"to\": \"6285791419625\",\n    \"type\": \"template\",\n    \"template\": {\n        \"name\": \"send_otp_app2\",\n        \"language\": {\n            \"code\": \"id\"\n        },\n        \"components\": [\n            {\n                \"type\": \"body\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"067778\"\n                    }\n                ]\n            },\n            {\n                \"type\": \"button\",\n                \"sub_type\": \"url\",\n                \"index\": \"0\",\n                \"parameters\": [\n                    {\n                        \"type\": \"text\",\n                        \"text\": \"067778\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.facebook.com/v16.0/102953366069265/messages",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v16.0",
+								"102953366069265",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,742 @@
+{
+	"info": {
+		"_postman_id": "7707f00c-752b-4345-ae85-c7cb7381930b",
+		"name": "JuraganCODBackendFinance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17919789"
+	},
+	"item": [
+		{
+			"name": "expedisi-process (backend-only)",
+			"item": [
+				{
+					"name": "ncs-process",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accno\": \"4233752000100013\",\n  \"comname\": \"JuraganCOD\",\n  \"pickpoint\": \"HAAH Project\",\n  \"pickaddress\": \"Jl. Pahlawan Perum As-sunnah 2 Blok C16 Depan E1 Kp. Tengah Cileungsi\",\n  \"pickcp\": \"HAAH Project\",\n  \"pickphone\": \"81381817272\",\n  \"pickkecid\": \"320107\",\n  \"pickzip\": \"16820\",\n  \"pickdate\": \"2023-08-28 09:02:13\",\n  \"pickemail\": \"dhifta48@gmail.com\",\n  \"picktimefrom\": \"2023-08-28 09:02:13\",\n  \"picktimeto\": \"2023-08-28 09:02:13\",\n  \"picktransport\": \"101\",\n  \"picktype\": \"0\",\n  \"transaction\": [\n    {\n      \"refno\": \"JC1693188132165105091\",\n      \"s_add1\": \"Jl. Pahlawan Perum As-sunnah 2 Blok C16 Depan E1 Kp. Tengah Cileungsi\",\n      \"s_add2\": \"CILEUNGSI\",\n      \"s_add3\": \"KAB BOGOR\",\n      \"s_add4\": \"JAWA BARAT\",\n      \"s_kecid\": \"320107\",\n      \"s_zip\": \"16820\",\n      \"s_phnno\": \"81381817272\",\n      \"s_email\": \"dhifta48@gmail.com\",\n      \"c_cnename\": \"Sulistari\",\n      \"c_add1\": \"Jl. Sendorow\",\n      \"c_add2\": \"PATI\",\n      \"c_add3\": \"KAB PATI\",\n      \"c_add4\": \"JAWA TENGAH\",\n      \"c_kecid\": \"331810\",\n      \"c_zip\": \"59114\",\n      \"c_phnno\": \"08579142977\",\n      \"c_email\": \"suportjuragancod@gmail.com\",\n      \"value\": 10000,\n      \"service\": \"UDRREG\",\n      \"specinstruction\": \"Baju anak-anak\",\n      \"weight\": 0.5,\n      \"vweight\": 0.5,\n      \"content\": \"Baju Anak\",\n      \"pieces\": 1,\n      \"FlagNFD\": 0,\n      \"Length\": 0.1,\n      \"Width\": 0.1,\n      \"Height\": 0.1,\n      \"DeliveryPrice\": \"10000\",\n      \"insuranceprice\": \"0\",\n      \"CODType\": \"BOTH\",\n      \"FlagFee\": \"1\",\n      \"CODAmount\": 20000\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.ptncs.com/bot/picktranscargo/juragancod/anVyYWdhbmNvZG5jczIwMjI=",
+							"protocol": "https",
+							"host": [
+								"api",
+								"ptncs",
+								"com"
+							],
+							"path": [
+								"bot",
+								"picktranscargo",
+								"juragancod",
+								"anVyYWdhbmNvZG5jczIwMjI="
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sap-process",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "api-key",
+								"value": "JuR4gAnC0d_#2022",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_code\": \"PKL059626\",\n    \"reference_no\": \"JC1693189583092800791\",\n    \"pickup_name\": \"HAAH Project\",\n    \"pickup_address\": \"Jl. Pahlawan Perum As-sunnah 2 Blok C16 Depan E1 Kp. Tengah Cileungsi\",\n    \"pickup_phone\": \"81381817272\",\n    \"pickup_place\": 1,\n    \"pickup_email\": \"dhifta48@gmail.com\",\n    \"pickup_postal_code\": \"16820\",\n    \"pickup_contact\": \"HAAH Project\",\n    \"pickup_district_code\": \"JB2211\",\n    \"service_type_code\": \"UDRREG\",\n    \"quantity\": 1,\n    \"total_item\": 1,\n    \"weight\": 0,\n    \"volumetric\": \"0 x 0 x 0\",\n    \"shipment_type_code\": \"SHTPC\",\n    \"description_item\": \"Baju Anak\",\n    \"item_value\": 0,\n    \"insurance_flag\": 1,\n    \"insurance_type_code\": \"\",\n    \"insurance_value\": 0,\n    \"cod_flag\": 2,\n    \"cod_value\": 20000,\n    \"shipper_name\": \"HAAH Project\",\n    \"shipper_address\": \"Jl. Pahlawan Perum As-sunnah 2 Blok C16 Depan E1 Kp. Tengah Cileungsi\",\n    \"shipper_phone\": \"81381817272\",\n    \"destination_district_code\": \"JT17\",\n    \"receiver_name\": \"Sulistari\",\n    \"receiver_address\": \"Jl. Sendorow\",\n    \"receiver_phone\": \"08579142977\",\n    \"special_instruction\": \"Baju anak-anak\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.coresyssap.com/shipment/pickup/single_push",
+							"protocol": "https",
+							"host": [
+								"api",
+								"coresyssap",
+								"com"
+							],
+							"path": [
+								"shipment",
+								"pickup",
+								"single_push"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jne-process",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "JURAGANCOD",
+									"type": "text"
+								},
+								{
+									"key": "api_key",
+									"value": "8d3433e87e3498f76d1d1f8351bc1e3b",
+									"type": "text"
+								},
+								{
+									"key": "PICKUP_NAME",
+									"value": "JuraganCOD",
+									"type": "text"
+								},
+								{
+									"key": "PICKUP_DATE",
+									"value": "15-09-2023",
+									"type": "text"
+								},
+								{
+									"key": "PICKUP_TIME",
+									"value": "16:00",
+									"type": "text"
+								},
+								{
+									"key": "PICKUP_PIC",
+									"value": "Bagas Satrio",
+									"type": "text"
+								},
+								{
+									"key": "PICKUP_PIC_PHONE",
+									"value": "08578293893889",
+									"type": "text"
+								},
+								{
+									"key": "PICKUP_ADDRESS",
+									"value": "Jl Pati Raya",
+									"type": "text"
+								},
+								{
+									"key": "PICKUP_DISTRICT",
+									"value": "PATI",
+									"type": "text"
+								},
+								{
+									"key": "PICKUP_CITY",
+									"value": "KABUPATEN PATI",
+									"type": "text"
+								},
+								{
+									"key": "PICKUP_SERVICE",
+									"value": "REG",
+									"type": "text"
+								},
+								{
+									"key": "PICKUP_VEHICLE",
+									"value": "Motor",
+									"type": "text"
+								},
+								{
+									"key": "BRANCH",
+									"value": "SRG20900000",
+									"type": "text"
+								},
+								{
+									"key": "CUST_ID",
+									"value": "80948800",
+									"type": "text"
+								},
+								{
+									"key": "ORDER_ID",
+									"value": "JNETESTCODJ929",
+									"type": "text"
+								},
+								{
+									"key": "SHIPPER_NAME",
+									"value": "Bagas Satrio",
+									"type": "text"
+								},
+								{
+									"key": "SHIPPER_ADDR1",
+									"value": "Jl Pati Raya",
+									"type": "text"
+								},
+								{
+									"key": "SHIPPER_ADDR2",
+									"value": "PATI",
+									"type": "text"
+								},
+								{
+									"key": "SHIPPER_ADDR3",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "SHIPPER_CITY",
+									"value": "KAB PATI",
+									"type": "text"
+								},
+								{
+									"key": "SHIPPER_ZIP",
+									"value": "59158",
+									"type": "text"
+								},
+								{
+									"key": "SHIPPER_REGION",
+									"value": "JAWA TENGAH",
+									"type": "text"
+								},
+								{
+									"key": "SHIPPER_COUNTRY",
+									"value": "INDONESIA",
+									"type": "text"
+								},
+								{
+									"key": "SHIPPER_CONTACT",
+									"value": "Bagas Satrio",
+									"type": "text"
+								},
+								{
+									"key": "SHIPPER_PHONE",
+									"value": "08578293893889",
+									"type": "text"
+								},
+								{
+									"key": "RECEIVER_NAME",
+									"value": "Ali Rozikin",
+									"type": "text"
+								},
+								{
+									"key": "RECEIVER_ADDR1",
+									"value": "Depok Raya",
+									"type": "text"
+								},
+								{
+									"key": "RECEIVER_ADDR2",
+									"value": "Depok",
+									"type": "text"
+								},
+								{
+									"key": "RECEIVER_ADDR3",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "RECEIVER_CITY",
+									"value": "KOTA DEPOK",
+									"type": "text"
+								},
+								{
+									"key": "RECEIVER_ZIP",
+									"value": "16514",
+									"type": "text"
+								},
+								{
+									"key": "RECEIVER_REGION",
+									"value": "JAWA BARAT",
+									"type": "text"
+								},
+								{
+									"key": "RECEIVER_COUNTRY",
+									"value": "INDONESIA",
+									"type": "text"
+								},
+								{
+									"key": "RECEIVER_CONTACT",
+									"value": "0856737763782",
+									"type": "text"
+								},
+								{
+									"key": "RECEIVER_PHONE",
+									"value": "0856737763782",
+									"type": "text"
+								},
+								{
+									"key": "ORIGIN_CODE",
+									"value": "DPK10000",
+									"type": "text"
+								},
+								{
+									"key": "DESTINATION_CODE",
+									"value": "SRG20903",
+									"type": "text"
+								},
+								{
+									"key": "SERVICE_CODE",
+									"value": "REG",
+									"type": "text"
+								},
+								{
+									"key": "WEIGHT",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "QTY",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "GOODS_DESC",
+									"value": "Baju Anak",
+									"type": "text"
+								},
+								{
+									"key": "GOODS_AMOUNT",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "INSURANCE_FLAG",
+									"value": "N",
+									"type": "text"
+								},
+								{
+									"key": "SPECIAL_INS",
+									"value": "Baju anak-anak",
+									"type": "text"
+								},
+								{
+									"key": "MERCHANT_ID",
+									"value": "211022",
+									"type": "text"
+								},
+								{
+									"key": "TYPE",
+									"value": "PICKUP",
+									"type": "text"
+								},
+								{
+									"key": "COD_FLAG",
+									"value": "Y",
+									"type": "text"
+								},
+								{
+									"key": "COD_AMOUNT",
+									"value": "15000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://apiv2.jne.co.id:10101/pickupcashless",
+							"protocol": "http",
+							"host": [
+								"apiv2",
+								"jne",
+								"co",
+								"id"
+							],
+							"port": "10101",
+							"path": [
+								"pickupcashless"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "antaraja-process",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access-key-id",
+								"value": "Anteraja_x_juragancod",
+								"type": "text"
+							},
+							{
+								"key": "secret-access-key",
+								"value": "dZwvt7tRffTa8o7R0oWQahle",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"booking_id\": \"JCOD-2839388\",\n    \"invoice_no\": \"JC082009300\",\n    \"service_code\": \"REG\",\n    \"parcel_total_weight\": 1000,\n    \"shipper\": {\n        \"name\": \"Jimmy\",\n        \"phone\": \"081327694998\",\n        \"email\": \"juragancod@gmail.com\",\n        \"district\": \"32.76.09\",\n        \"address\": \"Jl. Jimmy Nyonya\",\n        \"postcode\": \"16514\",\n        \"geoloc\": \"\"\n    },\n    \"receiver\": {\n        \"name\": \"Ali Rozikin\",\n        \"phone\": \"08572839938\",\n        \"email\": \"\",\n        \"district\": \"33.18.10\",\n        \"address\": \"Jl. Pati Raya\",\n        \"postcode\": \"59114\",\n        \"geoloc\": \"\"\n    },\n    \"items\": [\n        {\n            \"item_name\": \"Baju Anak\",\n            \"item_desc\": \"\",\n            \"item_category\": \"\",\n            \"item_quantity\": 1,\n            \"declared_value\": 10000,\n            \"weight\": 100\n        }\n    ],\n    \"use_insurance\": false,\n    \"declared_value\": 10000,\n    \"expect_time\": \"2023-09-29 15:00:00\",\n    \"is_cod\": false,\n    \"cod_amount\": 0,\n    \"insurance_price\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://doit.anteraja.id/krislanjayatransjuragancod/order",
+							"protocol": "https",
+							"host": [
+								"doit",
+								"anteraja",
+								"id"
+							],
+							"path": [
+								"krislanjayatransjuragancod",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "idexpress-process",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "data",
+									"value": "{\n  \"orderTime\": \"2023-08-28 10:06:13\",\n  \"orderNo\": \"JC1693191973413799251\",\n  \"expressType\": \"00\",\n  \"itemName\": \"Baju Anak\",\n  \"insured\": \"1\",\n  \"itemRemarks\": \"Baju anak-anak\",\n  \"itemQuantity\": 1,\n  \"itemCategory\": \"00\",\n  \"weight\": 0.5,\n  \"width\": 0,\n  \"length\": 0,\n  \"height\": 0,\n  \"serviceType\": \"00\",\n  \"itemValue\": 10000,\n  \"senderName\": \"HAAH Project\",\n  \"senderCellPhone\": \"081381817272\",\n  \"senderCityId\": \"52\",\n  \"senderDistrictId\": \"15043\",\n  \"senderAddress\": \"Jl. Pahlawan Perum As-sunnah 2 Blok C16 Depan E1 Kp. Tengah Cileungsi\",\n  \"recipientName\": \"Sulistari\",\n  \"recipientCellPhone\": \"08579142977\",\n  \"recipientCityId\": \"96\",\n  \"recipientDistrictId\": \"15493\",\n  \"recipientAddress\": \"Jl. Sendorow\",\n  \"paymentType\": \"01\",\n  \"codAmount\": 20000,\n  \"pickupStartTime\": \"1693199173\",\n  \"pickupEndTime\": \"1693213573\"\n}",
+									"type": "text"
+								},
+								{
+									"key": "appId",
+									"value": "935286388",
+									"type": "text"
+								},
+								{
+									"key": "sign",
+									"value": "92058e1bfa9338bd0ce74e8bc270b1bf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://rest.idexpress.com/open/v1/waybill/create",
+							"protocol": "https",
+							"host": [
+								"rest",
+								"idexpress",
+								"com"
+							],
+							"path": [
+								"open",
+								"v1",
+								"waybill",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sicepat-process",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"auth_key\": \"86C7A2647E434C08A169C230B80481F6\",\n    \"reference_number\": \"GH36737\",\n    \"pickup_request_date\": \"2023-09-16 12:00\",\n    \"pickup_method\": \"PICKUP\",\n    \"pickup_merchant_name\": \"JuraganCOD\",\n    \"pickup_address\": \"Pati\",\n    \"pickup_city\": \"KAB PATI\",\n    \"pickup_merchant_phone\": \"0856377487382\",\n    \"pickup_merchant_email\": \"juragancod@gmail.com\",\n    \"PackageList\": [{\n        \"receipt_number\": \"005037369960\",\n        \"origin_code\": \"PAT\",\n        \"delivery_type\": \"REG\",\n        \"parcel_category\": \"NORMAL\",\n        \"parcel_content\": \"Baju Anak\",\n        \"parcel_qty\": 1,\n        \"parcel_uom\": \"Pcs\",\n        \"parcel_value\": 10000,\n        \"cod_value\": 15000,\n        \"insurance_value\": 0,\n        \"total_weight\": 4,\n        \"parcel_length\": 2,\n        \"parcel_width\": 2,\n        \"parcel_height\": 2,\n\n        \"shipper_name\": \"Bagas Satrio\",\n        \"shipper_address\": \"PATI\",\n        \"shipper_province\": \"JAWA TENGAH\",\n        \"shipper_city\": \"KAB PATI\",\n        \"shipper_district\": \"DUKUHSETI\",\n        \"shipper_zip\": \"59158\",\n        \"shipper_phone\": \"085738749927\",\n\n        \"recipient_title\": \"Mr\",\n        \"recipient_name\": \"Ali Rozikin\",\n        \"recipient_address\": \"Depok Jaya\",\n        \"recipient_province\": \"JAWA BARAT\",\n        \"recipient_city\": \"KOTA DEPOK\",\n        \"recipient_district\": \"CINERE\",\n        \"recipient_zip\": \"16514\",\n        \"recipient_phone\": \"08394784578543\",\n        \"destination_code\": \"DPK10067\",\n        \"notes\": \"tester\"\n    }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://pickup.sicepat.com/api/partner/requestpickuppackage",
+							"protocol": "https",
+							"host": [
+								"pickup",
+								"sicepat",
+								"com"
+							],
+							"path": [
+								"api",
+								"partner",
+								"requestpickuppackage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "payment-order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"no_reff\": \"JC1693215590645473985\",\n    \"jumlah\": 11000,\n    \"awb\": \"3100002112471\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url_80}}api/payment/pay",
+							"host": [
+								"{{local_url_80}}api"
+							],
+							"path": [
+								"payment",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "saldo",
+			"item": [
+				{
+					"name": "show-saldo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url_80}}api/saldo",
+							"host": [
+								"{{local_url_80}}api"
+							],
+							"path": [
+								"saldo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "withdraw",
+			"item": [
+				{
+					"name": "withdraw/penarikan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRoaWZ0YTQ4QGdtYWlsLmNvbSIsImV4cCI6MjU1NTU4NTc3MSwiaWQiOjEwNzA4fQ.l1tTShSsxuaWAgvBS9nxJFUpVLRr6OxDyGXfgs4msyQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"jumlah\": 10000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{local_url_80}}api/saldo/withdraw",
+							"host": [
+								"{{local_url_80}}api"
+							],
+							"path": [
+								"saldo",
+								"withdraw"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "midtrans (backend-only)",
+			"item": [
+				{
+					"name": "notification-midtrans (webhook-only)",
+					"item": [
+						{
+							"name": "notifcitacion-handler",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"transaction_type\": \"on-us\",\n    \"transaction_time\": \"2023-08-28 16:49:51\",\n    \"transaction_status\": \"settlement\",\n    \"transaction_id\": \"00e03826-e6f2-43ed-ba66-1aa9e7c63009\",\n    \"status_message\": \"midtrans payment notification\",\n    \"status_code\": \"200\",\n    \"signature_key\": \"2e6b43d9321e51ebdad1a2cd8629ce1d2c9380291cb7052b1ecf7c75363024872da638b668eee7d685de746748219acaa01d923020250b8a50c773ba7ef41287\",\n    \"settlement_time\": \"2023-08-28 16:50:32\",\n    \"reference_id\": \"d563a738-b28e-4855-9cbb-c09b7e36740f\",\n    \"payment_type\": \"qris\",\n    \"order_id\": \"INV20230828094949\",\n    \"merchant_id\": \"G296433664\",\n    \"issuer\": \"gopay\",\n    \"gross_amount\": \"11000.00\",\n    \"fraud_status\": \"accept\",\n    \"expiry_time\": \"2023-08-28 17:04:51\",\n    \"currency\": \"IDR\",\n    \"acquirer\": \"gopay\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{local_url_80}}api/notification/pay-status",
+									"host": [
+										"{{local_url_80}}api"
+									],
+									"path": [
+										"notification",
+										"pay-status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "midtrans (Backend-only)",
+					"item": [
+						{
+							"name": "create-payment",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "SB-Mid-server-KxLj73mUmpjF7nYZKENTrsng",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"payment_type\": \"qris\",\n    \"transaction_details\": {\n        \"order_id\": \"order5\",\n        \"gross_amount\": 275000\n    },\n    \"item_details\": [\n        {\n            \"id\": \"id1\",\n            \"price\": 275000,\n            \"quantity\": 1,\n            \"name\": \"Bluedio H+ Turbine Headphone with Bluetooth 4.1 -\"\n        }\n    ],\n    \"qris\": {\n        \"acquirer\": \"gopay\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.sandbox.midtrans.com/v2/charge",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"midtrans",
+										"com"
+									],
+									"path": [
+										"v2",
+										"charge"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "refresh-qris",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "SB-Mid-server-KxLj73mUmpjF7nYZKENTrsng",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"payment_type\": \"qris\",\n    \"transaction_details\": {\n        \"order_id\": \"order5\",\n        \"gross_amount\": 275000\n    },\n    \"item_details\": [\n        {\n            \"id\": \"id1\",\n            \"price\": 275000,\n            \"quantity\": 1,\n            \"name\": \"Bluedio H+ Turbine Headphone with Bluetooth 4.1 -\"\n        }\n    ],\n    \"qris\": {\n        \"acquirer\": \"gopay\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://api.sandbox.midtrans.com/v2/INV20230826040345/status",
+									"protocol": "https",
+									"host": [
+										"api",
+										"sandbox",
+										"midtrans",
+										"com"
+									],
+									"path": [
+										"v2",
+										"INV20230826040345",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
