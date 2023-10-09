@@ -6,7 +6,7 @@ Langkah-langkah untuk mengecek ongkos kirim:
 
 1. Klik "Cek Ongkir"
 
-![Klik "Cek Ongkir"](../images/cekongkir-1.png)
+![Klik "Cek Ongkir"](images/cekongkir-1.png)
 
 2. Form untuk mengecek ongkos kirim akan muncul
 3. Masukan data asal serta tujuan pengiriman, dan berat barang
@@ -14,7 +14,7 @@ Langkah-langkah untuk mengecek ongkos kirim:
 
 5. Klik "Cari"
 
-![buttonsearch"](../images/cekongkir-4.png)
+![buttonsearch"](images/cekongkir-4.png)
 
 Berikut data dalam bentuk JSON yang dikirimkan ke API check-ongkir:
 ```
@@ -31,7 +31,7 @@ Berikut data dalam bentuk JSON yang dikirimkan ke API check-ongkir:
 Jika sukses, maka anda akan mendapatkan respon dari API check-ongkir dan tampilan pada dashboard sebagai berikut  
 **Tampilan pada dashboard**
 
-![result](../images/cekongkir-5.png)
+![result](images/cekongkir-5.png)
 
 **Respon API check-ongkir**
 ```

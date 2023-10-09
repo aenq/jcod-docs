@@ -8,7 +8,7 @@
 
 1. **Mengisi form register**
 
-![Halaman Register](../images/register.png)
+![Halaman Register](images/register.png)
 - Silahkan akses <b>JuraganCOD.com</b>
 - Klik <b>Daftar</b>
 - Isi form pendaftaran <br>
@@ -24,7 +24,7 @@ Contoh data JSON untuk dikirim melalui API <b><i>register-seller</i></b>:
 ```
 
 !> Hal yang perlu diperhatikan: <br>
-![Form Register](../images/form-register.png)
+![Form Register](images/form-register.png)
 ** Semua kolom kecuali `Kode Referral` <b>wajib</b> diisi. <br>
 ** `No. Whatsapp` minimal berisi 8 angka. <br>
 ** `Kata Sandi` minimal 8 angka dengan gabungan huruf kapital atau kecil, angka, dan simbol.
@@ -33,7 +33,7 @@ Setelah form berhasil dikirim dengan kriteria data yang sesuai, maka akan dialih
 
 2. Verifikasi nomor Whatsapp
 Tombol <b>Submit</b> pada form registrasi akan mentrigger API <b><i>send-whatsapp-api</i></b> yang mengirimkan OTP ke nomor Whatsapp yang telah anda input. <br>
-![Halaman Verifikasi OTP](../images/OTP.png)
+![Halaman Verifikasi OTP](images/OTP.png)
 
 - Cek kode OTP yang dikirim pada nomor Whatsapp anda. <br>
 Apabila belum menerima kode, maka lakukan <b>Kirim ulang kode.</b> <br>

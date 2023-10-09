@@ -2,7 +2,7 @@
 Pada halaman login, anda hanya perlu melakukan input <b>Email atau No Telfon</b> dan <b>Password</b> yang telah anda buat pada proses Registrasi Akun.<br>
 
 1. Mengisi data login
-![Halaman Login](../images/login.png)
+![Halaman Login](images/login.png)
 Contoh data JSON untuk dikirim melalui API <b><i>login</i></b>:
 ```
 {
