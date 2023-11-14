@@ -6,7 +6,7 @@ Anda dapat melakukan reset atau ubah kata sandi menggunakan fitur <b>Lupa Passwo
 ![Halaman Login](images/login.png)
 
 
-2. Pada halaman <<b>Lupa Password</b>, isi dengan No. Whatsapp atau Email yang terdaftar pada akun anda
+2. Pada halaman <b>Lupa Password</b>, isi dengan No. Whatsapp atau Email yang terdaftar pada akun anda
 ![Halaman Lupa Password](images/lupa-password.png)
 
 3. Masukkan kode OTP yang telah dikirim ke No. Whatsapp atau Email anda
