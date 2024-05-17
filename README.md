@@ -1,5 +1,7 @@
 # Panduan Penggunaan
 
+https://aenq.github.io/jcod-docs/#/
+
 **Apa yang Akan Anda Temukan di Panduan Ini?**
 
 Dalam panduan penggunaan API JuraganCOD ini, Anda akan mendapatkan wawasan mendalam tentang cara mengintegrasikan API ini ke dalam bisnis Anda. Kami akan membahas langkah-langkah mulai dari pendaftaran hingga pengaturan akun, cara membuat pengiriman, dan bagaimana memanfaatkan fitur-fitur canggih yang ditawarkan oleh JuraganCOD. Panduan ini akan membantu Anda mengambil langkah pertama menuju efisiensi operasional yang lebih besar dan pengiriman barang yang lebih baik.
